@@ -1,0 +1,25 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # Buenas prácticas que el PDF valora (código legible, sin lógica en widgets)
+    prefer_const_constructors: true
+    prefer_const_literals_to_create_immutables: true
+    prefer_const_declarations: true
+    avoid_print: true
+    use_key_in_widget_constructors: true
+    prefer_final_locals: true
+    prefer_single_quotes: true
+    require_trailing_commas: true
+    sort_child_properties_last: true
+    use_build_context_synchronously: true
+
+analyzer:
+  errors:
+    # Que los TODO no rompan la compilación
+    todo: ignore
+  exclude:
+    - build/**
+    - "**/*.g.dart"
+    - android/**
+    - web/**
